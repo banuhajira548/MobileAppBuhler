@@ -34,7 +34,7 @@ const SignUp = () => {
 
           <TouchableOpacity
             className="bg-blue-600 py-4 rounded-xl"
-            onPress={() => router.replace('/home')}
+            onPress={() => router.replace('/(app)')}
           >
             <Text className="text-white text-center text-lg font-semibold">
               Sign Up

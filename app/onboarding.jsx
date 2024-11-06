@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const onboardingData = [
   {
     id: '1',
-    title: 'Welcome to DeliverEase',
+    title: 'Welcome to Buhler',
     description: 'Your smart delivery management companion',
     image: require('../assets/onboarding-1.png'),
   },

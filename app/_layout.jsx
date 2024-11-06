@@ -1,13 +1,11 @@
 import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { Redirect } from 'expo-router';
 import "../global.css";
 
-// Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
-export default function Layout() {
+export default function RootLayout() {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -35,20 +33,12 @@ export default function Layout() {
   }
 
   return (
-    <>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen 
-          name="index" 
-          redirect={true}
-        />
-        <Stack.Screen 
-          name="splash" 
-          options={{ animation: 'none' }} 
-        />
-        <Stack.Screen name="onboarding" />
-        <Stack.Screen name="(auth)/login" />
-        <Stack.Screen name="(auth)/signup" />
-      </Stack>
-    </>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="splash" />
+      <Stack.Screen name="onboarding" />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(app)" options={{ headerShown: false }} />
+    </Stack>
   );
 }

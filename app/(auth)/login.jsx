@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <SafeAreaView className="flex-1 bg-white p-6">
       <View className="flex-1 justify-center">
-        <Text className="text-3xl font-bold mb-8 text-center">Welcome Back</Text>
+        <Text className="text-3xl font-bold mb-8 text-center">Log In</Text>
         
         <View className="space-y-4">
           <TextInput
@@ -29,7 +29,7 @@ const Login = () => {
 
           <TouchableOpacity
             className="bg-blue-600 py-4 rounded-xl"
-            onPress={() => router.replace('/home')}
+            onPress={() => router.replace('/(app)')}
           >
             <Text className="text-white text-center text-lg font-semibold">
               Login

@@ -20,10 +20,12 @@ const Splash = () => {
       try {
         const hasSeenOnboarding = await AsyncStorage.getItem('hasSeenOnboarding');
         
+        //splash screens get for 1000sec and it is updated for 2000 seconds
         logoScale.value = withSpring(1);
-        textOpacity.value = withTiming(1, { duration: 1000 });
+        textOpacity.value = withTiming(1, { duration: 3000 });
 
-        // Wait for animations
+        // Wait for animations still the animation comes till the animation comes 
+
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         if (hasSeenOnboarding) {
@@ -53,14 +55,14 @@ const Splash = () => {
     <View className="flex-1 bg-blue-600 items-center justify-center">
       <Animated.View style={logoStyle}>
         <View className="w-40 h-40 bg-white rounded-full items-center justify-center">
-          <Text className="text-blue-600 text-4xl font-bold">DE</Text>
+          <Text className="text-blue-600 text-4xl font-bold">BHD</Text>
         </View>
       </Animated.View>
       <Animated.Text 
         style={textStyle}
         className="text-white text-3xl font-bold mt-4"
       >
-        DeliverEase
+        Buhler Driver App
       </Animated.Text>
       <Animated.Text 
         style={textStyle}
