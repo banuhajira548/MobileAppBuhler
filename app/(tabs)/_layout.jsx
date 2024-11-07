@@ -34,7 +34,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="tripsheets"
+        name="tripdetails"
         options={{
           title: 'Trips',
           tabBarIcon: ({ color, size }) => (
@@ -50,6 +50,16 @@ export default function TabsLayout() {
             <Ionicons name="person-outline" size={size} color={color} />
           ),
         }}
+      />
+
+      <Tabs.Screen
+      name="tripsheets"
+      options={{
+      title: 'History',
+      tabBarIcon: ({ color }) => (
+      <Ionicons name="document-text" size={24} color={color} />
+      ),
+      }}
       />
     </Tabs>
   );

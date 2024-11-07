@@ -53,14 +53,14 @@ const Splash = () => {
     <View className="flex-1 bg-blue-600 items-center justify-center">
       <Animated.View style={logoStyle}>
         <View className="w-40 h-40 bg-white rounded-full items-center justify-center">
-          <Text className="text-blue-600 text-4xl font-bold">DE</Text>
+          <Text className="text-blue-600 text-4xl font-bold">BHD</Text>
         </View>
       </Animated.View>
       <Animated.Text 
         style={textStyle}
         className="text-white text-3xl font-bold mt-4"
       >
-        DeliverEase
+        Buhler Driver App
       </Animated.Text>
       <Animated.Text 
         style={textStyle}

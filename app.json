@@ -13,19 +13,43 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "your.bundle.identifier",
+      "config": {
+        "googleMapsApiKey": "AIzaSyA247Nq7gI2PlGw9DcAwnNwfHcqRzyB0_Y"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location when open to show your current location on the map.",
+        "NSLocationAlwaysUsageDescription": "This app needs access to location when in the background for navigation."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "your.package.name",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyA247Nq7gI2PlGw9DcAwnNwfHcqRzyB0_Y"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location for navigation and trip tracking."
+        }
+      ]
     ]
   }
 }
